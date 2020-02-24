@@ -1,0 +1,218 @@
+@import "reset.css";
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  box-shadow: 0 0 5px #222;
+  margin: 0 0 15px 0;
+}
+
+.column header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 30px;
+  opacity: 0.6;
+  color: #3fa93d;
+  text-align: center;
+  margin: 5px 0;
+  text-decoration: underline;
+}
+
+.column p {
+  margin-bottom: 5px;
+}
+
+.overflow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.site_body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site_content {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p,
+a,
+span,
+ul,
+li {
+  font-family: "Open Sans";
+}
+
+p {
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #000;
+}
+
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 10px;
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+ul li {
+  margin: 5px 0;
+}
+
+ul li p {
+  text-align: left;
+}
+
+.site_title {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px #222;
+}
+
+.margin_btm_none {
+  margin-bottom: 0;
+}
+
+footer {
+  height: 20vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  color: #fff;
+}
+
+.hero_bg_image {
+  height: 100vh;
+  background-image: url(../img/jk.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  color: #fff;
+}
+
+.bg_image1 {
+  height: 80vh;
+  background-image: url(../img/young-jk.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg_image2 {
+  height: 80vh;
+  background-image: url(../img/Flag_of_TANU.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg_image3 {
+  height: 80vh;
+  background-image: url(../img/ASP-TANU_kanga.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg_image4 {
+  height: 80vh;
+  background-image: url(../img/statue.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#title {
+  color: #fff;
+  font-size: 7vw;
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+  background: linear-gradient(90deg, #fff, #0ba2de, #fcd21c, #3fa93d, #fff);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  padding: 15px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+.more_info {
+  margin: 5px 0 15px 0;
+}
+.more_info a {
+  color: #fcd21c;
+}
