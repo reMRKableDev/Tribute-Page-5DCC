@@ -172,27 +172,18 @@ footer p {
   color: #fff;
 }
 
+.parallax_container {
+  height: 23vh;
+}
+
 .hero_bg_image {
-  height: 100vh;
-  background-image: url(../img/jk.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  color: #fff;
+  background-size: contain;
+  background-image: url(../img/jk.jpg);
 }
 
 .bg_image1 {
@@ -282,4 +273,24 @@ footer p {
 }
 .more_info a {
   color: #fcd21c;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .hero_bg_image {
+    height: 100vh;
+    background-image: url(../img/jk.jpg);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
 }
