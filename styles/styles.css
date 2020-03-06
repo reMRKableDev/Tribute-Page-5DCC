@@ -131,28 +131,119 @@ ul li p {
   text-align: left;
 }
 
-.site_title {
-  background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-shadow: 0 0 15px #222;
-  box-shadow: 0 0 15px #222;
-}
-
 .margin_btm_none {
   margin-bottom: 0;
 }
 
-footer {
-  height: 20vh;
-  background-color: #000000;
+.flex_container_centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_container {
+  height: 23vh;
+}
+
+.hero_image {
+  background-image: url(../img/jk.jpg);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+
+.scroll_container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 25%;
+  display: none;
+}
+
+.scroll_chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.scroll_chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.scroll_chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.scroll_chevron:before,
+.scroll_chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.scroll_chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.scroll_chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.scroll_text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+.timeline_content {
+  background-color: #fff;
+}
+
+.timeline_title {
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,66 +253,11 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-shadow: 0 0 15px #555;
+  box-shadow: 0 0 15px #555;
 }
 
-footer p {
-  color: #fff;
-}
-
-.parallax_container {
-  height: 23vh;
-}
-
-.hero_bg_image {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../img/jk.jpg);
-}
-
-.bg_image1 {
-  height: 80vh;
-  background-image: url(../img/young-jk.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg_image2 {
-  height: 80vh;
-  background-image: url(../img/Flag_of_TANU.png);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.bg_image3 {
-  height: 80vh;
-  background-image: url(../img/ASP-TANU_kanga.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.bg_image4 {
-  height: 80vh;
-  background-image: url(../img/statue.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#title {
+.timeline_animated_title {
   color: #fff;
   font-size: 7vw;
   letter-spacing: 0.1em;
@@ -238,8 +274,8 @@ footer p {
     color-stop(#3fa93d),
     to(#fff)
   );
-  background: -o-linear-gradient(left, #fff, #0ba2de, #fcd21c, #3fa93d, #fff);
-  background: linear-gradient(90deg, #fff, #0ba2de, #fcd21c, #3fa93d, #fff);
+  background: -o-linear-gradient(left, #000, #0ba2de, #fcd21c, #3fa93d, #000);
+  background: linear-gradient(90deg, #000, #0ba2de, #fcd21c, #3fa93d, #000);
   background-repeat: no-repeat;
   background-size: 80%;
   -webkit-animation: animate 3s linear infinite;
@@ -268,23 +304,84 @@ footer p {
   }
 }
 
+.timeline_col {
+  margin: 40px 40px 40px 80px;
+}
+
+.timeline_col header h2 {
+  font-size: 10vw;
+  color: #f3f3f3;
+  letter-spacing: 3px;
+}
+
+.timeline_col header h3 {
+  color: #0ba2de;
+  margin-top: -60px;
+  font-size: 8vw;
+}
+
+.timeline_col .memoir_description {
+  border-left: 5px solid #fcd21c;
+}
+
+.timeline_col .memoir_description p {
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
 .more_info {
-  margin: 5px 0 15px 0;
+  padding: 10px;
 }
 .more_info a {
-  color: #fcd21c;
+  color: #3fa93d;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 15px;
+}
+
+footer p {
+  color: #fff;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .hero_bg_image {
+  .hero_container {
     height: 100vh;
-    background-image: url(../img/jk.jpg);
+  }
+
+  .hero_image {
+    background-size: cover;
+  }
+  .timeline .timeline_col .memoir_description p {
+    text-align: right;
+  }
+  .scroll_container {
+    display: block;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .scroll_container {
+    top: 35%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
